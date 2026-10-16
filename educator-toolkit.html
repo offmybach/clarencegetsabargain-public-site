@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Financial Literacy Teaching Resources, Grades 1–5 | Clarence</title>
+<meta name="description" content="Free educator toolkit for Clarence Gets a Bargain, grades 1–5: lesson plans, discussion guide, assessments, standards crosswalk. No login, no email.">
+<link rel="canonical" href="https://clarencegetsabargain.com/educator-toolkit.html">
+<style>
+@font-face{font-family:'Hold';src:url('fonts/Hold.woff2') format('woff2'),url('fonts/Hold.woff') format('woff')}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#0054a6;--orange:#ff6b2b;--gold:#ffe066;--cream:#f5ecd7}
+body{font-family:'Inter',sans-serif;background:#fff;color:#14346e;min-height:100vh}
+
+/* HEADER */
+.site-header{background:#0054a6;padding:14px 30px;display:flex;justify-content:space-between;align-items:center}
+.site-header a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.8rem;font-weight:600;transition:color .2s}
+.site-header a:hover{color:#fff}
+.brand{font-family:'Hold',sans-serif;color:#fff;font-size:1rem}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0054a6 0%,#003d7a 55%,#1a5c2e 100%);padding:70px 30px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 80px)}
+.hero-badge{display:inline-block;background:#ffe066;color:#0054a6;font-size:.65rem;font-weight:900;padding:6px 18px;border-radius:50px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;position:relative;z-index:1}
+.hero h1{font-family:'Hold',sans-serif;font-size:clamp(2rem,5vw,3.2rem);color:#fff;margin-bottom:12px;position:relative;z-index:1;line-height:1.2}
+.hero h1 span{color:#ffe066}
+.hero p{color:rgba(255,255,255,.85);font-size:1rem;max-width:580px;margin:0 auto 32px;line-height:1.7;position:relative;z-index:1}
+.hero-scissors{font-size:1.2rem;margin-right:6px}
+
+/* BIG DOWNLOAD BTN */
+.dl-hero-btn{display:inline-flex;align-items:center;gap:12px;background:#ff6b2b;color:#fff;border:none;padding:20px 44px;border-radius:50px;font-family:'Hold',sans-serif;font-size:1.2rem;cursor:pointer;box-shadow:0 8px 30px rgba(255,107,43,.45);transition:all .3s;position:relative;z-index:1;text-decoration:none}
+.dl-hero-btn:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(255,107,43,.55)}
+.dl-hero-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.dl-hero-btn .spinner{width:22px;height:22px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.dl-hero-btn.loading .spinner{display:block}
+.dl-hero-btn.loading .btn-text{display:none}
+.hero-note{color:rgba(255,255,255,.5);font-size:.72rem;margin-top:14px;position:relative;z-index:1}
+
+/* CONTENT */
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+section{padding:60px 0}
+
+/* WHAT'S INSIDE */
+.inside-section{background:#fff}
+.section-label{font-family:'Hold',sans-serif;font-size:.72rem;color:#ff6b2b;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+h2{font-family:'Hold',sans-serif;color:#0054a6;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:8px}
+.section-sub{color:#666;font-size:.9rem;margin-bottom:36px;line-height:1.6;max-width:640px}
+
+.files-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-bottom:40px}
+.file-card{background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:24px 20px;transition:all .25s;position:relative;overflow:hidden}
+.file-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--orange))}
+.file-card:hover{border-color:#0054a6;box-shadow:0 8px 24px rgba(0,84,166,.1);transform:translateY(-2px)}
+.file-icon{font-size:2.2rem;margin-bottom:12px;display:block}
+.file-card h3{font-family:'Hold',sans-serif;color:#0054a6;font-size:1rem;margin-bottom:6px}
+.file-card p{font-size:.8rem;color:#777;line-height:1.6;margin-bottom:16px}
+.file-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
+.file-tag{background:#f0f6ff;color:#0054a6;font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:4px}
+.file-dl-btn{display:flex;align-items:center;gap:6px;background:#f5ecd7;color:#0054a6;border:2px dashed #ff6b2b;border-radius:8px;padding:8px 14px;font-size:.75rem;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;width:100%;justify-content:center}
+.file-dl-btn:hover{background:#ffe8d6;border-color:#e55000}
+
+/* STANDARDS STRIP */
+.standards-strip{background:#0054a6;padding:40px 30px;text-align:center}
+.standards-strip h3{font-family:'Hold',sans-serif;color:#ffe066;font-size:1.3rem;margin-bottom:16px}
+.std-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.std-badge{background:rgba(255,255,255,.12);color:#fff;font-size:.75rem;font-weight:700;padding:8px 18px;border-radius:50px;border:1px solid rgba(255,255,255,.2)}
+
+/* BULK CTA */
+.bulk-section{background:#f5ecd7;border-top:4px dashed #ff6b2b;padding:60px 30px;text-align:center}
+.bulk-section h2{font-family:'Hold',sans-serif;color:#0054a6;font-size:1.8rem;margin-bottom:10px}
+.bulk-section p{color:#555;margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7}
+.bulk-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.bulk-btn{padding:14px 32px;border-radius:50px;font-family:'Hold',sans-serif;font-size:.95rem;cursor:pointer;border:none;transition:all .3s;text-decoration:none;display:inline-block}
+.bulk-btn.primary{background:#0054a6;color:#fff;box-shadow:0 4px 16px rgba(0,84,166,.3)}
+.bulk-btn.primary:hover{background:#003d7a;transform:translateY(-2px)}
+.bulk-btn.secondary{background:#fff;color:#0054a6;border:2px dashed #0054a6}
+.bulk-btn.secondary:hover{background:#f0f6ff}
+
+/* PROGRESS OVERLAY */
+#dl-progress{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:9999;backdrop-filter:blur(4px)}
+#dl-progress.visible{display:flex}
+.progress-card{background:#fff;border-radius:20px;padding:40px 48px;text-align:center;max-width:380px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.3);border:4px dashed #ff6b2b;position:relative}
+.progress-card::before{content:'✂';position:absolute;top:-18px;left:16px;font-size:1.3rem;color:#ff6b2b;background:#fff;padding:0 4px}
+.progress-card h3{font-family:'Hold',sans-serif;color:#0054a6;font-size:1.4rem;margin-bottom:8px}
+.progress-card p{color:#888;font-size:.85rem;margin-bottom:20px}
+.progress-bar-wrap{background:#f0f0f0;border-radius:50px;height:10px;overflow:hidden;margin-bottom:12px}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,#0054a6,#ff6b2b);border-radius:50px;transition:width .4s}
+.progress-status{font-size:.75rem;color:#aaa;font-weight:600}
+.progress-success{display:none}
+.progress-success .s-icon{font-size:3rem;margin-bottom:10px}
+.progress-success h3{color:#2e7d32}
+.progress-success p{color:#555}
+@media(max-width:768px){
+  .dl-hero-btn{min-height:48px;padding:14px 28px;font-size:1rem}
+  .dl-hero-btn .btn-text{min-height:22px;display:inline-flex;align-items:center;line-height:1.2}
+}
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <a href="/">← Back to Clarence Gets a Bargain</a>
+  <span class="brand">Educator Toolkit</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge"><span class="hero-scissors">✂</span> 100% Free — No Strings Attached</div>
+  <h1>Free Financial Literacy<br><span>Educator Toolkit</span></h1>
+  <p>Free financial literacy teaching resources for grades 1–5: lesson plans, discussion guides, assessments and classroom printables. Start with a 15-minute activity that needs no book, or use <em>Clarence Gets a Bargain</em> for a four-week read-aloud unit.</p>
+  <p><a href="wants-vs-needs.html" style="color:#ffe066;font-weight:700">Start the free wants vs. needs activity →</a><br><a href="free-money-lesson-plans.html" style="color:#fff;text-decoration:underline">See the four-week lesson plan overview →</a></p>
+  <div style="background:#f0f8ff;border:2px dashed #0054a6;border-radius:14px;padding:18px 22px;max-width:640px;margin:18px auto 22px;text-align:left">
+    <p style="margin:0;font-weight:700;color:#0054a6">✅ Refreshed toolkit is here.</p>
+    <p style="margin:6px 0 0;font-size:.95rem;color:#333">All 6 docs now match the published book, anchored to real pages, with verified standards alignment. Open any card below to view in-browser or click <strong>Print PDF</strong>.</p>
+    <p style="margin:12px 0 6px;font-size:.92rem;color:#333"><strong>Plus, ready-to-print:</strong></p>
+    <ul style="margin:0;padding-left:20px;font-size:.92rem;color:#333;line-height:1.6">
+      <li><a href="resources/wyze-shopper-certificate.html" style="color:#ff6b2b;font-weight:700;text-decoration:none">🏆 Wyze Shopper Certificate &rarr;</a> &mdash; type-the-name-in-browser, or print blank.</li>
+      <li><a href="resources/curriculum-companion.html" style="color:#ff6b2b;font-weight:700;text-decoration:none">✂ Curriculum Companion (5 printables) &rarr;</a> &mdash; sort cards, comparison worksheet, clearance stickers, price tags, mock coupons.</li>
+      <li><a href="resources/free-sample-print.html" style="color:#ff6b2b;font-weight:700;text-decoration:none">📖 The First Five Pages, Free &rarr;</a> &mdash; read it before you assign it.</li>
+    </ul>
+  </div>
+  <p class="hero-note">Free resource access · Browser-print to PDF · No login or email. Book-based lessons require access to the book.</p>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside-section">
+  <div class="container">
+    <div class="section-label">✂ What's Inside</div>
+    <h2>Everything You Need to Teach It</h2>
+    <p class="section-sub">From first read-aloud to final assessment — the complete classroom program for <em>Clarence Gets a Bargain</em>, ready for Grades 1–5.</p>
+
+    <div class="files-grid">
+      <div class="file-card">
+        <span class="file-icon">👁️</span>
+        <h3>Educator Preview</h3>
+        <p>Full overview of the book's educational content, teaching philosophy, and classroom integration guide. Start here.</p>
+        <div class="file-tags"><span class="file-tag">Overview</span><span class="file-tag">Grades 1–5</span></div>
+        <a href="resources/educator-preview-print.html" target="_blank" rel="noopener" class="file-dl-btn">✂ Open &amp; Print</a>
+      </div>
+      <div class="file-card">
+        <span class="file-icon">📋</span>
+        <h3>Lesson Plans</h3>
+        <p>Four 45-minute weekly sessions. Real page references, standards codes, differentiation for grades 1–2 and 3–5, and a send-home bridge prompt for each week.</p>
+        <div class="file-tags"><span class="file-tag">Jump$tart 2021</span><span class="file-tag">CCSS</span><span class="file-tag">4 Weeks</span></div>
+        <a href="resources/lesson-plans-print.html" target="_blank" rel="noopener" class="file-dl-btn">✂ Open &amp; Print</a>
+      </div>
+      <div class="file-card">
+        <span class="file-icon">💬</span>
+        <h3>Discussion Guide</h3>
+        <p>Six chapter sections with three depth levels per prompt — Literal, Inferential, Evaluative — plus the book's official 21-term back-matter glossary in Mom's voice.</p>
+        <div class="file-tags"><span class="file-tag">3 Depth Levels</span><span class="file-tag">21 Vocab Terms</span><span class="file-tag">Read-Aloud Ready</span></div>
+        <a href="resources/discussion-guide-print.html" target="_blank" rel="noopener" class="file-dl-btn">✂ Open &amp; Print</a>
+      </div>
+      <div class="file-card">
+        <span class="file-icon">📝</span>
+        <h3>Assessment Worksheet</h3>
+        <p>10-question pre and post-test anchored to real book content. Answer key, scoring rubric, accommodations page, and 25-row class data tracking table for grant reporting.</p>
+        <div class="file-tags"><span class="file-tag">Pre/Post</span><span class="file-tag">Answer Key</span><span class="file-tag">Grant-Ready</span></div>
+        <a href="resources/assessment-worksheet-print.html" target="_blank" rel="noopener" class="file-dl-btn">✂ Open &amp; Print</a>
+      </div>
+      <div class="file-card">
+        <span class="file-icon">🏠</span>
+        <h3>Family Activity Sheet</h3>
+        <p>Five take-home activities (5–15 min each) tied to specific book pages. Sortable by &ldquo;5 minutes,&rdquo; &ldquo;next store run,&rdquo; or &ldquo;quiet weekend.&rdquo;</p>
+        <div class="file-tags"><span class="file-tag">Family</span><span class="file-tag">Take-Home</span><span class="file-tag">Grades 1–5</span></div>
+        <a href="resources/family-activity-print.html" target="_blank" rel="noopener" class="file-dl-btn">✂ Open &amp; Print</a>
+      </div>
+      <div class="file-card">
+        <span class="file-icon">📊</span>
+        <h3>Standards Alignment Chart</h3>
+        <p>23-row concept-by-concept crosswalk to Jump$tart 2021, CEE, CCSS Math &amp; ELA, and FDIC Money Smart. Framework source URLs for grant-reviewer verification.</p>
+        <div class="file-tags"><span class="file-tag">Jump$tart</span><span class="file-tag">CCSS</span><span class="file-tag">CEE</span><span class="file-tag">FDIC</span></div>
+        <a href="resources/standards-chart-print.html" target="_blank" rel="noopener" class="file-dl-btn">✂ Open &amp; Print</a>
+      </div>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div style="text-align:center;padding:10px 0 20px">
+      <p style="font-size:.95rem;color:#666;max-width:560px;margin:0 auto">Each doc opens in a new tab. Click <strong>&#x1F5A8;&#xFE0F; Print PDF</strong> in the toolbar to save or print. All materials are free to reproduce and distribute within your institution.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STANDARDS STRIP -->
+<div class="standards-strip">
+  <div class="container">
+    <h3>Standards Aligned Across 4 Major Frameworks</h3>
+    <div class="std-badges">
+      <span class="std-badge">Jump$tart National Standards</span>
+      <span class="std-badge">Common Core (CCSS)</span>
+      <span class="std-badge">Council for Economic Education</span>
+      <span class="std-badge">FDIC Money Smart K–5</span>
+      <span class="std-badge">Title I Grant Compatible</span>
+      <span class="std-badge">Est. Lexile AD 620L</span>
+      <span class="std-badge">Est. Guided Reading L–N</span>
+    </div>
+  </div>
+</div>
+
+<!-- MORE FOR THE CLASSROOM -->
+<div class="container" style="max-width:1000px;margin:44px auto;padding:0 20px">
+  <h2 style="margin-bottom:6px">More Where That Came From</h2>
+  <p style="color:#333;margin-bottom:18px">Six files above. Eight more below. Still free. Still no login.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px">
+    <a href="resources/educator-preview.html" style="display:block;border:2px dashed #0054a6;border-radius:12px;padding:14px 16px;text-decoration:none;color:#14346e"><strong style="color:#0054a6">Educator Preview &rarr;</strong><br><span style="font-size:.88rem">What the book covers, page by page.</span></a>
+    <a href="resources/zero-prep-lesson-plans.html" style="display:block;border:2px dashed #0054a6;border-radius:12px;padding:14px 16px;text-decoration:none;color:#14346e"><strong style="color:#0054a6">Zero-Prep Lesson Plans &rarr;</strong><br><span style="font-size:.88rem">Open it, read it, teach it. That's the prep.</span></a>
+    <a href="resources/curriculum-alignment-matrix.html" style="display:block;border:2px dashed #0054a6;border-radius:12px;padding:14px 16px;text-decoration:none;color:#14346e"><strong style="color:#0054a6">Standards Crosswalk &rarr;</strong><br><span style="font-size:.88rem">Filter 23 concepts by framework. Grant-ready.</span></a>
+    <a href="resources/smart-shopper-challenge.html" style="display:block;border:2px dashed #0054a6;border-radius:12px;padding:14px 16px;text-decoration:none;color:#14346e"><strong style="color:#0054a6">Smart Shopper Challenge &rarr;</strong><br><span style="font-size:.88rem">A classroom game with a scoreboard.</span></a>
+    <a href="resources/sea-mart-secret-mission.html" style="display:block;border:2px dashed #0054a6;border-radius:12px;padding:14px 16px;text-decoration:none;color:#14346e"><strong style="color:#0054a6">Sea-Mart Secret Mission &rarr;</strong><br><span style="font-size:.88rem">Send them into a real store with a job.</span></a>
+    <a href="resources/the-money-talk.html" style="display:block;border:2px dashed #0054a6;border-radius:12px;padding:14px 16px;text-decoration:none;color:#14346e"><strong style="color:#0054a6">The Money Talk &rarr;</strong><br><span style="font-size:.88rem">The take-home half. Parents do this part.</span></a>
+    <a href="wants-vs-needs.html" style="display:block;border:2px dashed #0054a6;border-radius:12px;padding:14px 16px;text-decoration:none;color:#14346e"><strong style="color:#0054a6"><em>Wants vs. Needs</em> Module &rarr;</strong><br><span style="font-size:.88rem">The concept the whole book turns on.</span></a>
+    <a href="school-visits.html" style="display:block;border:2px dashed #ff6b2b;border-radius:12px;padding:14px 16px;text-decoration:none;color:#14346e"><strong style="color:#ff6b2b">The Aisle Five Assembly &rarr;</strong><br><span style="font-size:.88rem">Author visits. In person or virtual.</span></a>
+  </div>
+</div>
+
+<!-- BULK CTA -->
+<div class="bulk-section">
+  <div class="container">
+    <h2>Need Classroom Sets?</h2>
+    <p>"Volume pricing that would make Clarence himself nod in approval." Bulk orders for schools, libraries, and districts available. The book + free toolkit = a complete financial literacy program.</p>
+    <div class="bulk-btns">
+      <a href="mailto:orders@clarencegetsabargain.com?subject=Bulk Order Inquiry — Clarence Gets a Bargain&body=Hi Jonathan,%0D%0A%0D%0AI'm interested in bulk/classroom set pricing for Clarence Gets a Bargain.%0D%0A%0D%0ASchool/Organization:%0D%0ANumber of copies needed:%0D%0AGrade level(s):%0D%0A%0D%0AThank you!" class="bulk-btn primary">📧 Inquire About Bulk Pricing</a>
+      <a href="/#buy" class="bulk-btn secondary">Buy a Single Copy — $19.99</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
